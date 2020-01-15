@@ -17,7 +17,6 @@ public class EntityManager<E> implements DBContext<E> {
     private static final String INSERT_STATEMENT = "INSERT INTO `%s` (%s) VALUES (%s)";
     private static final String UPDATE_STATEMENT = "UPDATE %s SET %s WHERE %s";
     private static final String SELECT_ALL_WITH_WHERE = "SELECT * FROM %s WHERE %s";
-    private static final String SELECT_FIRST_WITH_WHERE = SELECT_ALL_WITH_WHERE + " LIMIT 1";
 
     private Connection connection;
 

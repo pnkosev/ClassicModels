@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Main {
-    public static void main(String[] args) throws SQLException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws SQLException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {
         Connector.createConnect("root", "root", "classic_model_test");
 
         Connection connection = Connector.getConnection();
@@ -31,6 +31,6 @@ public class Main {
 //
 //        System.out.println(found);
 
-        customerManager.find(Customer.class, "credit_limit > 100000").forEach(c -> System.out.println(c.getCustomerFirstName()));
+//        customerManager.find(Customer.class, "credit_limit > 100000").forEach(c -> System.out.println(c.getCustomerFirstName()));
     }
 }
